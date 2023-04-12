@@ -37,23 +37,26 @@ const ProductDetails = () => {
     <>
       <Cart />
       <div className="">
-        <div
-          className={
-            showLargeImage
-              ? 'h-screen w-screen bg-black bg-opacity-60 absolute top-0 flex justify-center items-center'
-              : 'h-screen w-screen bg-black bg-opacity-60 absolute top-0 hidden'
-          }
-          onClick={() => setShowLargeImage(false)}
-        >
-          <Zoom
-            img={currentProduct.img}
-            zoomScale={3}
-            height={500}
-            width={500}
-            alt="wdwtc"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+        {showLargeImage && (
+          <div
+            className={
+              showLargeImage
+                ? 'h-screen w-screen bg-black bg-opacity-60 absolute top-0 flex justify-center items-center'
+                : 'hidden'
+            }
+            onClick={() => setShowLargeImage(false)}
+          >
+            {console.log('currentProduct', currentProduct)}
+            <Zoom
+              img={currentProduct.img}
+              zoomScale={3}
+              height={500}
+              width={500}
+              alt="wdwtc"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
 
         <div className="w-4/5 mx-auto mt-11 flex ">
           <div className="w-2/4 mr-10">
