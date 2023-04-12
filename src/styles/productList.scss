@@ -1,0 +1,11 @@
+.hover-span {
+  display: none;
+}
+
+.hover-active {
+  display: block;
+  background-color: #f5f3f7;
+  left: 0;
+  bottom: 35px;
+  z-index: 9;
+}
