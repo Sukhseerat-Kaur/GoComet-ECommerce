@@ -20,10 +20,7 @@ export default function Cart() {
       onClick={() => dispatch(toggleCart())}
     >
       {selectedItem.length > 0 ? (
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className="border-black border h-full"
-        >
+        <div onClick={(e) => e.stopPropagation()} className=" h-full">
           {selectedItem.map((item, idx) => {
             totalPrice += parseInt(item.price) * parseInt(item.quantity + 1);
             return (
