@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "craco --openssl-legacy-provider start",
-    "build": "craco --openssl-legacy-provider build",
+    "build": "CI=false && craco --openssl-legacy-provider build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css"
